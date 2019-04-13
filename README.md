@@ -12,12 +12,12 @@
 
 无需其他任何配置，不对项目结构造成任何侵害。
 
-###1、工具下载 InjectionIII
+### 1、工具下载 InjectionIII
 InjectionIII 是我们需要用到个一个工具，不要因为要用一个工具而厌烦这个方案，它很简单。
 它是免费的，app store 搜索：InjectionIII，Icon是 一个针筒。
 也是开源的，GitHub链接： [https://github.com/johnno1962/injectionforxcode](https://github.com/johnno1962/injectionforxcode)
 
-###2、配置路径
+### 2、配置路径
  打开InjectionIII工具，选择Open Project，选择你的代码所在的路径，然后点击Select Project Directory保存。
 
 ![image.png](https://upload-images.jianshu.io/upload_images/2953683-861930b2a363de45.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -26,7 +26,7 @@ InjectionIII 是我们需要用到个一个工具，不要因为要用一个工�
 
 注意：InjectionIII 的File Watcher选项要保持选中状态。
 
-###3、导入配置文件
+### 3、导入配置文件
 这步我简单写了一个配置文件，直接 [GitHub](https://github.com/ZHSY/InjectionIIIHelper)下载 导入项目即可。
 如果你比较反感下载文件也可以自己处理：
 1.设置AppDelegate.m
@@ -52,7 +52,7 @@ InjectionIII 是我们需要用到个一个工具，不要因为要用一个工�
   [self viewDidLoad];
 }
 ```
-###4、启动项目，修改验证
+### 4、启动项目，修改验证
 在Xcode Command+R运行项目 ，看到Injection connected 提示即表示配置成功。
 ![image.png](https://upload-images.jianshu.io/upload_images/2953683-0466996daaf1b816.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
