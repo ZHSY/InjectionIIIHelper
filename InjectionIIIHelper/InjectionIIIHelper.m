@@ -19,7 +19,11 @@
  runtime给VC绑定上之后，每次部署完就重新viewDidLoad
  */
 void injected (id self, SEL _cmd) {
+    //重新加载view
+    [self loadView];
     [self viewDidLoad];
+    [self viewWillLayoutSubviews];
+    [self viewWillAppear:NO];
 }
 
 + (void)load
