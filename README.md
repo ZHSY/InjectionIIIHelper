@@ -71,5 +71,7 @@ InjectionIII 是我们需要用到个一个工具，不要因为要用一个工�
 工具使用中如有问题可以参考github上的过往经验，也欢迎留言我们一起讨论。
 工具git地址：[https://github.com/johnno1962/injectionforxcode](https://github.com/johnno1962/injectionforxcode)
 
+简书链接： https://www.jianshu.com/p/3a8a24dcd92b
+
 如果有帮到你，请给我个star，我会very兴奋的。
 
