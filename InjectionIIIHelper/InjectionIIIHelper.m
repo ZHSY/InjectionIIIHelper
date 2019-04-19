@@ -19,11 +19,36 @@
  runtime给VC绑定上之后，每次部署完就重新viewDidLoad
  */
 void injected (id self, SEL _cmd) {
-    //重新加载view
-    [self loadView];
-    [self viewDidLoad];
-    [self viewWillLayoutSubviews];
-    [self viewWillAppear:NO];
+    //vc 刷新
+    if ([self isKindOfClass:[UIViewController class]]) {
+        [self loadView];
+        [self viewDidLoad];
+        [self viewWillLayoutSubviews];
+        [self viewWillAppear:NO];
+    }
+    //view 刷新
+    else if ([self isKindOfClass:[UIView class]]){
+        UIViewController *vc = [InjectionIIIHelper viewControllerSupportView:self];
+        if (vc && [vc isKindOfClass:[UIViewController class]]) {
+            [vc loadView];
+            [vc viewDidLoad];
+            [vc viewWillLayoutSubviews];
+            [vc viewWillAppear:NO];
+        }
+    }
+}
+
+/**
+ 获取view 所属的vc，失败为nil
+ */
++ (UIViewController *)viewControllerSupportView:(UIView *)view {
+    for (UIView* next = [view superview]; next; next = next.superview) {
+        UIResponder *nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
 }
 
 + (void)load
@@ -39,8 +64,12 @@ void injected (id self, SEL _cmd) {
         [[NSNotificationCenter defaultCenter] removeObserver:observer];
     }];
     
-    //给UIViewController 注册injected 方法
-    class_addMethod([UIViewController class], NSSelectorFromString(@"injected"), (IMP)injected, "v@:");
+//    //给UIViewController 注册injected 方法
+//    class_addMethod([UIViewController class], NSSelectorFromString(@"injected"), (IMP)injected, "v@:");
+//    //给uiview 注册injected 方法
+//    class_addMethod([UIView class], NSSelectorFromString(@"injected"), (IMP)injected, "v@:");
+//    //统一添加 injected 方法
+    class_addMethod([NSObject class], NSSelectorFromString(@"injected"), (IMP)injected, "v@:");
     
 #endif
 }
