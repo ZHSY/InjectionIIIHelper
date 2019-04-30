@@ -1,5 +1,5 @@
 # InjectionIIIHelper
-依托InjectionIII的iOS热部署配置文件，无侵害，导入即用。
+依托InjectionIII的Xcode热部署配置文件，无侵害，导入即用。
 
 最终效果：
 代码在保存之后，立马在模拟器上看到修改后的效果，
