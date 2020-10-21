@@ -10,7 +10,7 @@
 ----
 昨天被同事用flutter项目的热部署效果给刺激了一下，被秀之余想到：他用个杂交品种能热部署，而我用苹果亲儿子没道理不行啊！
 所以花了一个上午时间，俺终于找到了这个成吨减少工作量的方案。
-参考链接：[https://www.jianshu.com/p/b2a2f15a3283](https://www.jianshu.com/p/b2a2f15a3283)
+参考链接：[https://www.jianshu.com/p/3a8a24dcd92b](https://www.jianshu.com/p/3a8a24dcd92b)
 
 超级简单，只有三步：
 1、一个工具
