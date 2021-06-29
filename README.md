@@ -70,6 +70,7 @@ InjectionIII 是我们需要用到个一个工具，不要因为要用一个工�
 - 工程路径中最好不要有中文，目前只处理了view和vc中的保存刷新，并且对部分xib控件无效。
 - Bundle 路径跟xcode路径和工具路径相关，不过一般不用更换。
 - 有朋友反应使用RAC + MVVM  injected 方法注册会崩溃，可使用 INJECTION_BUNDLE_NOTIFICATION 通知来监听 编译更新，后续我会完善更新。
+- 如遇到编译后vc页面空白，请检查vc中子view的添加方式，是否是.m 中的 [self loadView]; 引起，可尝试注释掉这句
 
 工具使用中如有问题可以参考github上的过往经验，也欢迎留言我们一起讨论。
 工具git地址：[https://github.com/johnno1962/injectionforxcode](https://github.com/johnno1962/injectionforxcode)
