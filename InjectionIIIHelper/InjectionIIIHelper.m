@@ -9,7 +9,7 @@
 #import "InjectionIIIHelper.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
-
+#import <UIKit/UIKit.h>
 
 @implementation InjectionIIIHelper
 
@@ -21,7 +21,7 @@
 void injected (id self, SEL _cmd) {
     //vc 刷新
     if ([self isKindOfClass:[UIViewController class]]) {
-        [self loadView];
+        //[self loadView];
         [self viewDidLoad];
         [self viewWillLayoutSubviews];
         [self viewWillAppear:NO];
@@ -30,7 +30,7 @@ void injected (id self, SEL _cmd) {
     else if ([self isKindOfClass:[UIView class]]){
         UIViewController *vc = [InjectionIIIHelper viewControllerSupportView:self];
         if (vc && [vc isKindOfClass:[UIViewController class]]) {
-            [vc loadView];
+            //[vc loadView];
             [vc viewDidLoad];
             [vc viewWillLayoutSubviews];
             [vc viewWillAppear:NO];
