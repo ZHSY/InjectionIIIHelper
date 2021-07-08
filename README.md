@@ -101,7 +101,7 @@ InjectionIII 是我们需要用到个一个工具，不要因为要用一个工�
 工具git地址：[https://github.com/johnno1962/injectionforxcode](https://github.com/johnno1962/injectionforxcode)  也可appstore 直接下载
 
 
-简书链接： https://www.jianshu.com/p/3a8a24dcd92b
+简书链接： 404（删除了，被歧视就不在那混了）
 掘金链接： https://juejin.cn/post/6854573214396825614
 
 如果有帮到你，记得给我个star，我会very兴奋的。
